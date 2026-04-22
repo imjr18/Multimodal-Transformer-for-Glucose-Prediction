@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+  <style>
+    .title { font: 700 24px sans-serif; fill: #1f2937; }
+    .label { font: 600 16px sans-serif; fill: #111827; }
+    .small { font: 13px sans-serif; fill: #374151; }
+    .box { fill: #f8fafc; stroke: #334155; stroke-width: 2; rx: 10; ry: 10; }
+    .accent { fill: #eef2ff; stroke: #4338ca; stroke-width: 2; rx: 10; ry: 10; }
+    .arrow { stroke: #475569; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#475569" />
+    </marker>
+  </defs>
+
+  <text x="30" y="40" class="title">Supervised Multimodal Forecasting Backbone</text>
+
+  <rect x="30" y="80" width="130" height="70" class="box" />
+  <text x="60" y="108" class="label">HR</text>
+  <text x="44" y="132" class="small">[B, 24, 1]</text>
+
+  <rect x="30" y="170" width="130" height="70" class="box" />
+  <text x="44" y="198" class="label">Glucose Ctx</text>
+  <text x="44" y="222" class="small">[B, 24, 1]</text>
+
+  <rect x="30" y="260" width="130" height="70" class="box" />
+  <text x="52" y="288" class="label">ECG-HRV</text>
+  <text x="44" y="312" class="small">[B, 24, 5]</text>
+
+  <rect x="210" y="95" width="170" height="220" class="accent" />
+  <text x="236" y="128" class="label">Per-Modality Encoders</text>
+  <text x="236" y="160" class="small">TokenEmbedding</text>
+  <text x="236" y="184" class="small">+ Positional Encoding</text>
+  <text x="236" y="208" class="small">+ Modality Embedding</text>
+  <text x="236" y="232" class="small">+ TransformerEncoder</text>
+  <text x="236" y="270" class="small">HR / ECG / EMG / CBF</text>
+  <text x="236" y="294" class="small">EEG via frequency / patch /</text>
+  <text x="236" y="318" class="small">hierarchical encoder</text>
+
+  <rect x="450" y="120" width="180" height="170" class="accent" />
+  <text x="470" y="152" class="label">HR-Centric Fusion</text>
+  <text x="470" y="184" class="small">HR attends to ECG</text>
+  <text x="470" y="208" class="small">HR attends to EMG</text>
+  <text x="470" y="232" class="small">HR attends to CBF</text>
+  <text x="470" y="256" class="small">EEG adds summary token</text>
+
+  <rect x="700" y="140" width="160" height="130" class="accent" />
+  <text x="724" y="172" class="label">Forecast Head</text>
+  <text x="724" y="204" class="small">Final encoder + CLS</text>
+  <text x="724" y="228" class="small">Linear(64,64)</text>
+  <text x="724" y="252" class="small">ReLU + Dropout + Linear(64,2)</text>
+
+  <path d="M160 115 L210 115" class="arrow" />
+  <path d="M160 205 L210 205" class="arrow" />
+  <path d="M160 295 L210 295" class="arrow" />
+  <path d="M380 205 L450 205" class="arrow" />
+  <path d="M630 205 L700 205" class="arrow" />
+
+  <text x="700" y="320" class="small">Outputs: glucose_t+30, glucose_t+60</text>
+</svg>
+

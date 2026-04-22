@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+  <style>
+    .title { font: 700 24px sans-serif; fill: #1f2937; }
+    .label { font: 600 16px sans-serif; fill: #111827; }
+    .small { font: 13px sans-serif; fill: #374151; }
+    .box { fill: #fff7ed; stroke: #9a3412; stroke-width: 2; rx: 10; ry: 10; }
+    .accent { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 2; rx: 10; ry: 10; }
+    .arrow { stroke: #475569; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#475569" />
+    </marker>
+  </defs>
+
+  <text x="30" y="40" class="title">Non-Invasive Glucose Estimation Pipeline</text>
+
+  <rect x="30" y="90" width="160" height="170" class="box" />
+  <text x="55" y="122" class="label">Biosignal Window</text>
+  <text x="50" y="154" class="small">HR [B, 6, 1]</text>
+  <text x="50" y="178" class="small">ECG [B, 6, 5]</text>
+  <text x="50" y="202" class="small">EMG [B, 6, 2]</text>
+  <text x="50" y="226" class="small">EEG bands [B, 6, 5]</text>
+  <text x="50" y="250" class="small">CBF [B, 6, 1]</text>
+
+  <rect x="250" y="90" width="180" height="170" class="accent" />
+  <text x="282" y="122" class="label">Signal Encoders</text>
+  <text x="272" y="154" class="small">TokenEmbedding</text>
+  <text x="272" y="178" class="small">+ Modality Embedding</text>
+  <text x="272" y="202" class="small">+ Positional Encoding</text>
+  <text x="272" y="226" class="small">+ TransformerEncoder</text>
+
+  <rect x="500" y="90" width="180" height="170" class="accent" />
+  <text x="520" y="122" class="label">Cross-Attention Fusion</text>
+  <text x="520" y="154" class="small">HR attends to ECG</text>
+  <text x="520" y="178" class="small">HR attends to EMG</text>
+  <text x="520" y="202" class="small">HR attends to EEG</text>
+  <text x="520" y="226" class="small">HR attends to CBF</text>
+  <text x="520" y="250" class="small">+ user token</text>
+
+  <rect x="740" y="90" width="130" height="170" class="box" />
+  <text x="756" y="122" class="label">Output</text>
+  <text x="756" y="154" class="small">Final encoder + CLS</text>
+  <text x="756" y="178" class="small">UncertaintyHead</text>
+  <text x="756" y="210" class="small">mean glucose</text>
+  <text x="756" y="234" class="small">log-variance</text>
+
+  <path d="M190 175 L250 175" class="arrow" />
+  <path d="M430 175 L500 175" class="arrow" />
+  <path d="M680 175 L740 175" class="arrow" />
+
+  <text x="30" y="315" class="small">MC Dropout keeps dropout active at inference; calibration updates only the user embedding.</text>
+</svg>
+

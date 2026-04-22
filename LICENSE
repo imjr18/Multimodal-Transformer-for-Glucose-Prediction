@@ -1,0 +1,47 @@
+MIT License
+
+Copyright (c) 2026 Project Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+DATASET LICENSES
+
+OhioT1DM Dataset:
+  This project uses the OhioT1DM dataset, which requires a separate access
+  request or data-use process. The dataset is NOT included in this repository.
+  Current access details are documented in docs/technical/dataset_guide.md.
+
+PhysioCGM Dataset:
+  Open-access dataset described in:
+  "A multimodal physiological dataset for non-invasive blood glucose
+  estimation", Scientific Data (2025), DOI: 10.1038/s41597-025-06090-6.
+  The repository does not redistribute the raw files.
+
+MIT-BIH Arrhythmia Database:
+  Hosted via PhysioNet:
+  https://physionet.org/content/mitdb/1.0.0/
+  License: Open Data Commons Attribution License v1.0.
+
+CHB-MIT Scalp EEG Database:
+  Hosted via PhysioNet:
+  https://physionet.org/content/chbmit/1.0.0/
+  Access and citation details are documented in docs/technical/dataset_guide.md.
+
